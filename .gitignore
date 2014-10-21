@@ -49,6 +49,12 @@ coverage.xml
 *.log
 *.pot
 
+# Vim
+*.sw[op]
+
 # Sphinx documentation
 docs/_build/
 
+# PCB
+pcb/output/
+*-bak
