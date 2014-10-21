@@ -1,0 +1,44 @@
+PCBNEW-LibModule-V1  Mon 08 Sep 2014 23:14:50 CEST
+# encoding utf-8
+Units mm
+$INDEX
+POT_3
+$EndINDEX
+$MODULE POT_3
+Po 0 0 0 15 540E1C42 00000000 ~~
+Li POT_3
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "POT_3"
+T1 0 0 1 1 0 0.15 N V 21 N "VAL**"
+DS -3 3.8 -3 15 0.15 21
+DS -3 15 3 15 0.15 21
+DS 3 15 3 3.8 0.15 21
+DS -8.5 3.8 8.5 3.8 0.15 21
+DS -8.5 -5.4 8.5 -5.4 0.15 21
+DS -8.5 -5.4 -8.5 3.8 0.15 21
+DS 8.5 -5.4 8.5 3.8 0.15 21
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -5 0
+$EndPAD
+$PAD
+Sh "2" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" C 2 2 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 5 0
+$EndPAD
+$EndMODULE POT_3
+$EndLIBRARY
