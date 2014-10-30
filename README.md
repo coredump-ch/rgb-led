@@ -4,7 +4,7 @@ Ein RGB LED Board, ursprünglich entwickelt für den Ferienpass Rapperswil, durc
 
 ## Version 1
 
-Die Version 1 besteht aus Potis für jede RGB-Farbe. Der Strom wird **nur** durch die Potis geregelt. Im Gegensatz zu V2 besitzt V1 auch noch keinen Schalter zur Stromzufuhr - es kann also lediglich eine Stromquelle angeschlossen oder getrennt vom Board werden.
+Die Version 1 besteht aus Potis für jede RGB-Farbe. Der Strom wird **nur** durch die Potis geregelt. Im Gegensatz zu V2 besitzt V1 auch noch keinen Schalter zur Stromzufuhr - es kann also lediglich eine Stromquelle angeschlossen oder vom Board getrennt werden.
 
 ![][photo-v1-back]
 
