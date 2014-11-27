@@ -1,0 +1,66 @@
+Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Thu 27 Nov 2014 11:57:18 PM CET
+
+BeginCmp
+TimeStamp = /5476D68C;
+Reference = CONN1;
+ValeurCmp = RGB LED;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D28C;
+Reference = QB1;
+ValeurCmp = IRF520N FET;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D286;
+Reference = QG1;
+ValeurCmp = IRF520N FET;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D26F;
+Reference = QR1;
+ValeurCmp = IRF520N FET;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54775FF7;
+Reference = RV1;
+ValeurCmp = POT;
+IdModule  = POT_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776051;
+Reference = RV2;
+ValeurCmp = POT;
+IdModule  = POT_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776057;
+Reference = RV3;
+ValeurCmp = POT;
+IdModule  = POT_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /5477A860;
+Reference = SW1;
+ValeurCmp = SWITCH_INV;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776301;
+Reference = UC1;
+ValeurCmp = ARDUINO_NANO;
+IdModule  = arduino_nano;
+EndCmp
+
+EndListe

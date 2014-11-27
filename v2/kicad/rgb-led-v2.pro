@@ -1,11 +1,6 @@
-update=Don 27 Nov 2014 18:43:52 CET
+update=Thu 27 Nov 2014 11:51:18 PM CET
 version=1
-last_client=eeschema
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+last_client=cvpcb
 [pcbnew]
 version=1
 LastNetListRead=
@@ -26,7 +21,6 @@ DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -43,6 +37,9 @@ LibName13=led
 LibName14=dip_sockets
 LibName15=pga_sockets
 LibName16=valves
+LibName17=arduino-nano
+LibName18=library
+LibDir=../../../../../../home/danilo/Projects/rgb-led/kicad-library
 [general]
 version=1
 [eeschema]
@@ -84,5 +81,9 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=arduino_shieldsNCL
-LibName32=arduino-nano
+LibName31=arduino-nano
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

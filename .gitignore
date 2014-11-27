@@ -57,3 +57,5 @@ docs/_build/
 # PCB
 pcb/output/
 *-bak
+*.bak
+*-cache.lib
