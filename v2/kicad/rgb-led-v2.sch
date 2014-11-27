@@ -1,0 +1,265 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:arduino_shieldsNCL
+LIBS:arduino-nano
+LIBS:rgb-led-v2-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "27 nov 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FET_N QR
+U 1 1 5476D26F
+P 5850 3300
+F 0 "QR" H 5753 3550 70  0000 C CNN
+F 1 "IRF520N FET" H 5703 3053 60  0000 R CNN
+F 2 "~" H 5850 3300 60  0000 C CNN
+F 3 "~" H 5850 3300 60  0000 C CNN
+	1    5850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L FET_N QG
+U 1 1 5476D286
+P 5850 1500
+F 0 "QG" H 5753 1750 70  0000 C CNN
+F 1 "IRF520N FET" H 5703 1253 60  0000 R CNN
+F 2 "~" H 5850 1500 60  0000 C CNN
+F 3 "~" H 5850 1500 60  0000 C CNN
+	1    5850 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L FET_N QB
+U 1 1 5476D28C
+P 5850 2400
+F 0 "QB" H 5753 2650 70  0000 C CNN
+F 1 "IRF520N FET" H 5703 2153 60  0000 R CNN
+F 2 "~" H 5850 2400 60  0000 C CNN
+F 3 "~" H 5850 2400 60  0000 C CNN
+	1    5850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 5476D52F
+P 1400 1000
+F 0 "#PWR?" H 1400 950 20  0001 C CNN
+F 1 "+12V" H 1400 1100 30  0000 C CNN
+F 2 "" H 1400 1000 60  0000 C CNN
+F 3 "" H 1400 1000 60  0000 C CNN
+	1    1400 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5476D53E
+P 1400 4800
+F 0 "#PWR?" H 1400 4800 30  0001 C CNN
+F 1 "GND" H 1400 4730 30  0001 C CNN
+F 2 "" H 1400 4800 60  0000 C CNN
+F 3 "" H 1400 4800 60  0000 C CNN
+	1    1400 4800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L CONN_4 CONN_4
+U 1 1 5476D68C
+P 7450 2250
+F 0 "CONN_4" V 7400 2250 50  0000 C CNN
+F 1 "RGB LED" V 7500 2250 50  0000 C CNN
+F 2 "~" H 7450 2250 60  0000 C CNN
+F 3 "~" H 7450 2250 60  0000 C CNN
+	1    7450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L POT RV1
+U 1 1 54775FF7
+P 1500 2350
+F 0 "RV1" H 1500 2250 50  0000 C CNN
+F 1 "POT" H 1500 2350 50  0000 C CNN
+F 2 "~" H 1500 2350 60  0000 C CNN
+F 3 "~" H 1500 2350 60  0000 C CNN
+	1    1500 2350
+	1    0    0    1   
+$EndComp
+$Comp
+L POT RV2
+U 1 1 54776051
+P 1500 2850
+F 0 "RV2" H 1500 2750 50  0000 C CNN
+F 1 "POT" H 1500 2850 50  0000 C CNN
+F 2 "~" H 1500 2850 60  0000 C CNN
+F 3 "~" H 1500 2850 60  0000 C CNN
+	1    1500 2850
+	1    0    0    1   
+$EndComp
+$Comp
+L POT RV3
+U 1 1 54776057
+P 1500 3350
+F 0 "RV3" H 1500 3250 50  0000 C CNN
+F 1 "POT" H 1500 3350 50  0000 C CNN
+F 2 "~" H 1500 3350 60  0000 C CNN
+F 3 "~" H 1500 3350 60  0000 C CNN
+	1    1500 3350
+	1    0    0    1   
+$EndComp
+$Comp
+L ARDUINO_NANO U1
+U 1 1 54776301
+P 3600 2800
+F 0 "U1" H 4150 1750 70  0000 C CNN
+F 1 "ARDUINO_NANO" H 4450 1600 70  0000 C CNN
+F 2 "DIL20" H 3600 2750 60  0000 C CNN
+F 3 "" H 3600 2800 60  0000 C CNN
+	1    3600 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1650 3450 1000
+Wire Wire Line
+	1400 1000 7100 1000
+Wire Wire Line
+	3600 4500 3600 4350
+Wire Wire Line
+	1400 4500 1400 4800
+Wire Wire Line
+	3600 1500 3600 1650
+Wire Wire Line
+	1100 1500 3600 1500
+Connection ~ 1400 4500
+Wire Wire Line
+	1100 1500 1100 3350
+Wire Wire Line
+	1100 2350 1250 2350
+Wire Wire Line
+	1100 2850 1250 2850
+Connection ~ 1100 2350
+Wire Wire Line
+	1100 3350 1250 3350
+Connection ~ 1100 2850
+Wire Wire Line
+	1750 3350 1950 3350
+Wire Wire Line
+	1950 3350 1950 4500
+Connection ~ 1950 4500
+Wire Wire Line
+	1750 2850 2100 2850
+Wire Wire Line
+	2100 2850 2100 4500
+Connection ~ 2100 4500
+Wire Wire Line
+	1750 2350 2250 2350
+Wire Wire Line
+	2250 2350 2250 4500
+Connection ~ 2250 4500
+Wire Wire Line
+	1500 2500 1500 2600
+Wire Wire Line
+	1500 2600 2900 2600
+Wire Wire Line
+	1500 3000 1500 3150
+Wire Wire Line
+	1500 3150 2400 3150
+Wire Wire Line
+	2400 3150 2400 2700
+Wire Wire Line
+	2400 2700 2900 2700
+Wire Wire Line
+	1500 3500 1500 3650
+Wire Wire Line
+	1500 3650 2550 3650
+Wire Wire Line
+	2550 3650 2550 2800
+Wire Wire Line
+	2550 2800 2900 2800
+Wire Wire Line
+	1400 4500 4900 4500
+Wire Wire Line
+	4300 3300 5550 3300
+Wire Wire Line
+	4300 3100 4700 3100
+Wire Wire Line
+	4700 3100 4700 2400
+Wire Wire Line
+	4700 2400 5550 2400
+Wire Wire Line
+	4300 2850 4600 2850
+Wire Wire Line
+	4600 2850 4600 1500
+Wire Wire Line
+	4600 1500 5550 1500
+Wire Wire Line
+	6000 1850 4900 1850
+Wire Wire Line
+	4900 1850 4900 4500
+Connection ~ 3600 4500
+Wire Wire Line
+	6000 2750 4900 2750
+Connection ~ 4900 2750
+Wire Wire Line
+	6000 3650 4900 3650
+Connection ~ 4900 3650
+Wire Wire Line
+	7100 2200 6900 2200
+Wire Wire Line
+	6900 2200 6900 1150
+Wire Wire Line
+	6900 1150 6000 1150
+Wire Wire Line
+	7100 2300 6900 2300
+Wire Wire Line
+	6900 2300 6900 2950
+Wire Wire Line
+	6900 2950 6000 2950
+Wire Wire Line
+	7100 2400 6800 2400
+Wire Wire Line
+	6800 2400 6800 2050
+Wire Wire Line
+	6800 2050 6000 2050
+Wire Wire Line
+	7100 1000 7100 2100
+Connection ~ 3450 1000
+$EndSCHEMATC
