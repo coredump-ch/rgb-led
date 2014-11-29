@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Thu 27 Nov 2014 11:57:18 PM CET
+Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sat 29 Nov 2014 07:53:00 PM CET
 
 BeginCmp
 TimeStamp = /5476D68C;
@@ -50,10 +50,10 @@ IdModule  = POT_3;
 EndCmp
 
 BeginCmp
-TimeStamp = /5477A860;
+TimeStamp = /547836EC;
 Reference = SW1;
-ValeurCmp = SWITCH_INV;
-IdModule  = ;
+ValeurCmp = SPST;
+IdModule  = KCD3;
 EndCmp
 
 BeginCmp
