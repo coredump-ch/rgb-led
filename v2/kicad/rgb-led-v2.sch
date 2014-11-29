@@ -156,17 +156,6 @@ F 3 "" H 4850 2700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
-U 1 1 5477A4FA
-P 4850 3600
-F 0 "#PWR03" H 4850 3600 30  0001 C CNN
-F 1 "GND" H 4850 3530 30  0001 C CNN
-F 2 "" H 4850 3600 60  0000 C CNN
-F 3 "" H 4850 3600 60  0000 C CNN
-	1    4850 3600
-	1    0    0    -1  
-$EndComp
-$Comp
 L PWR_FLAG #FLG04
 U 1 1 5477A759
 P 3500 4200
@@ -254,8 +243,6 @@ Wire Wire Line
 Wire Wire Line
 	5800 2600 4850 2600
 Wire Wire Line
-	5800 3500 4850 3500
-Wire Wire Line
 	6900 2050 6700 2050
 Wire Wire Line
 	6700 2050 6700 1000
@@ -279,8 +266,6 @@ Wire Wire Line
 	4850 1700 4850 1800
 Wire Wire Line
 	4850 2600 4850 2700
-Wire Wire Line
-	4850 3500 4850 3600
 Wire Wire Line
 	1050 850  1600 850 
 Wire Wire Line
@@ -401,4 +386,29 @@ Wire Wire Line
 	1050 1050 1200 1050
 Wire Wire Line
 	1200 1050 1200 1150
+Wire Wire Line
+	4850 3500 4850 3600
+Wire Wire Line
+	5800 3500 4850 3500
+$Comp
+L GND #PWR03
+U 1 1 5477A4FA
+P 4850 3600
+F 0 "#PWR03" H 4850 3600 30  0001 C CNN
+F 1 "GND" H 4850 3530 30  0001 C CNN
+F 2 "" H 4850 3600 60  0000 C CNN
+F 3 "" H 4850 3600 60  0000 C CNN
+	1    4850 3600
+	1    0    0    -1  
+$EndComp
+Text Label 5350 3500 0    60   ~ 0
+GND
+Text Label 5400 3500 0    60   ~ 0
+GND
+Text Label 5050 1700 0    60   ~ 0
+GND
+Text Label 5100 2600 0    60   ~ 0
+GND
+Text Label 4850 3600 0    60   ~ 0
+gnd
 $EndSCHEMATC
