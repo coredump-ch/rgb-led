@@ -1,31 +1,38 @@
-Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sat 29 Nov 2014 07:53:00 PM CET
+Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sat 29 Nov 2014 08:16:42 PM CET
 
 BeginCmp
 TimeStamp = /5476D68C;
 Reference = CONN1;
 ValeurCmp = RGB LED;
-IdModule  = ;
+IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A1B2B;
+Reference = CONN2;
+ValeurCmp = VCC 12V;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476D28C;
 Reference = QB1;
 ValeurCmp = IRF520N FET;
-IdModule  = ;
+IdModule  = IRF520N;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476D286;
 Reference = QG1;
 ValeurCmp = IRF520N FET;
-IdModule  = ;
+IdModule  = IRF520N;
 EndCmp
 
 BeginCmp
 TimeStamp = /5476D26F;
 Reference = QR1;
 ValeurCmp = IRF520N FET;
-IdModule  = ;
+IdModule  = IRF520N;
 EndCmp
 
 BeginCmp
