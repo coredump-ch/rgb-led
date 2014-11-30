@@ -60,3 +60,4 @@ pcb/output/
 *.bak
 *-cache.lib
 _autosave-*
+*wings~
