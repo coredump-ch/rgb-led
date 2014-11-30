@@ -2,11 +2,11 @@
 
   (general
     (links 22)
-    (no_connects 22)
+    (no_connects 21)
     (area 18.679999 19.949999 115.369049 81.130001)
     (thickness 1.6)
     (drawings 6)
-    (tracks 0)
+    (tracks 2)
     (zones 0)
     (modules 11)
     (nets 14)
@@ -38,7 +38,10 @@
   )
 
   (setup
-    (last_trace_width 0.01)
+    (last_trace_width 1.38)
+    (user_trace_width 0.035)
+    (user_trace_width 0.35)
+    (user_trace_width 1.38)
     (trace_clearance 0.015)
     (zone_clearance 0.508)
     (zone_45_only no)
@@ -609,5 +612,8 @@
   (gr_line (start 18.73 20) (end 108.73 20) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 108.73 20) (end 108.73 70) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 18.73 70) (end 108.73 70) (angle 90) (layer Edge.Cuts) (width 0.1))
+
+  (segment (start 21.59 39.37) (end 21.59 53.58) (width 1.38) (layer B.Cu) (net 9) (status 400000))
+  (segment (start 21.59 53.58) (end 31.92 63.91) (width 1.38) (layer B.Cu) (net 9) (tstamp 547B0007) (status 800000))
 
 )
