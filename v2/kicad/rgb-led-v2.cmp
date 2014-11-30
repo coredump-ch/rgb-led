@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sat 29 Nov 2014 08:16:42 PM CET
+Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sun 30 Nov 2014 01:01:46 PM CET
 
 BeginCmp
 TimeStamp = /5476D68C;
@@ -12,6 +12,13 @@ TimeStamp = /547A1B2B;
 Reference = CONN2;
 ValeurCmp = VCC 12V;
 IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /547B0358;
+Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = FUSE5-20;
 EndCmp
 
 BeginCmp
