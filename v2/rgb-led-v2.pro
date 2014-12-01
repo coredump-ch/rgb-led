@@ -1,4 +1,4 @@
-update=Sun 30 Nov 2014 12:37:16 PM CET
+update=Tue 02 Dec 2014 12:11:25 AM CET
 version=1
 last_client=eeschema
 [general]
@@ -28,7 +28,7 @@ DrawSegmentWidth="    0.200000"
 BoardOutlineThickness="    0.100000"
 ModuleOutlineThickness="    0.150000"
 [pcbnew/libraries]
-LibDir=../../../../../../home/danilo/Projects/rgb-led/kicad-library
+LibDir=../kicad-library
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -49,7 +49,7 @@ LibName17=arduino-nano
 LibName18=library
 [eeschema]
 version=1
-LibDir=../../kicad-library
+LibDir=../kicad-library
 NetFmtName=
 RptD_X=0
 RptD_Y=100
