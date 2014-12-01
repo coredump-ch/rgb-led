@@ -25,15 +25,10 @@ MOSFETs. This enables the control of more LEDs at the same time.
 
 ## Licensing
 
-This project is licensed under the [TAPR Open Hardware License](tapr-ohl). The
-image files (schema, 3d view, photos etc) are published under the [Creative
-Commons BY-SA License](cc-by-sa-4).
-
+See `LICENSE.md` file.
 
 
 [v1-photo-back]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v1_back.jpg
 [v2-schema]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/schema.png
 [v2-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/pcb.png
 [v2-3d]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/3d.png
-[tapr-ohl]: http://www.tapr.org/OHL
-[cc-by-sa-4]: https://creativecommons.org/licenses/by-sa/4.0/
