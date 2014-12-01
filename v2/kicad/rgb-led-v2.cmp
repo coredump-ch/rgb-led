@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-may-18)-stable date = Sun 30 Nov 2014 01:01:46 PM CET
+Cmp-Mod V01 Created by PcbNew date = Mon 01 Dez 2014 22:22:13 CET
 
 BeginCmp
 TimeStamp = /5476D68C;
@@ -53,14 +53,14 @@ BeginCmp
 TimeStamp = /54776051;
 Reference = RV2;
 ValeurCmp = POT;
-IdModule  = POT_3;
+IdModule  = POT_3_Naked;
 EndCmp
 
 BeginCmp
 TimeStamp = /54776057;
 Reference = RV3;
 ValeurCmp = POT;
-IdModule  = POT_3;
+IdModule  = POT_3_Naked;
 EndCmp
 
 BeginCmp
