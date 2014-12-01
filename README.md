@@ -1,16 +1,39 @@
 # RGB LED
 
-Ein RGB LED Board, ursprünglich entwickelt für den Ferienpass Rapperswil, durchgeführt mit 8 Teilnehmenden im Oktober 2014. Die Teilnehmer waren ca. 10 Jahre alt.
+An RGB LED board, originally developed in fall 2014 by coredump hackerspace in
+Rapperswil, Switzerland for teaching kids (~10y) the basics of electronics.
 
 ## Version 1
 
-Die Version 1 besteht aus Potis für jede RGB-Farbe. Der Strom wird **nur** durch die Potis geregelt. Im Gegensatz zu V2 besitzt V1 auch noch keinen Schalter zur Stromzufuhr - es kann also lediglich eine Stromquelle angeschlossen oder vom Board getrennt werden.
+The v1 consists of a potentiometer for each RGB color. The current is only
+controlled by the potentiometers. Therefore not too many LEDs can be driven at
+the same time.
 
-![foto v1][photo-v1-back]
+In contrast to v2 the v1 is also missing a switch to turn on/off the power.
+
+![foto v1][v1-photo-back]
 
 ## Version 2
 
-Die Version 2 verwendet einen Arduino Nano als Controller, welcher im Gegenzug drei MOSFETs verwendet um die RGB LEDs per PWM zu dimmen. Dadurch ist es möglich auch grössere Streifen mit RGB LEDs anzusteuern.
+The v2 is more advanced and uses an Arduino Nano as controller. The arduino
+controls the RGB LEDs' brightness through PWM. The LEDs are switched with three
+MOSFETs. This enables the control of more LEDs at the same time.
+
+![schema v2][v2-schema]
+![pcb v2][v2-pcb]
+![3d visualization v2][v2-3d]
+
+## Licensing
+
+This project is licensed under the [TAPR Open Hardware License](tapr-ohl). The
+image files (schema, 3d view, photos etc) are published under the [Creative
+Commons BY-SA License](cc-by-sa-4).
 
 
-[photo-v1-back]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v1_back.jpg
+
+[v1-photo-back]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v1_back.jpg
+[v2-schema]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/schema.png
+[v2-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/pcb.png
+[v2-3d]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/3d.png
+[tapr-ohl]: http://www.tapr.org/OHL
+[cc-by-sa-4]: https://creativecommons.org/licenses/by-sa/4.0/
