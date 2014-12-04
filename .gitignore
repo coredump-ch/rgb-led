@@ -61,3 +61,6 @@ pcb/output/
 *-cache.lib
 _autosave-*
 *wings~
+
+# Arduino / AVR
+build-nano328/
