@@ -21,6 +21,13 @@ Based on the [work of Steve Cooley](http://www.thingiverse.com/thing:20513).
 Text generator is [done by Phil Greenland](http://www.thingiverse.com/thing:59817).
 
 
+Source Code
+===========
+
+All source code is licensed under the [MIT license](mit).
+
+
 [tapr-ohl]: http://www.tapr.org/OHL
 [cc-by-nc-sa-3]: http://creativecommons.org/licenses/by-nc-sa/3.0/
 [cc-by-sa-4]: https://creativecommons.org/licenses/by-sa/4.0/
+[mit]: http://mit-license.org/
