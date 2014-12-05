@@ -24,6 +24,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "colors.h"
 #include "usart.h"
 
 // LEDs
@@ -103,20 +104,38 @@ static inline void initTimers(void) {
 /** Entry point **/
 int main(void) {
 
+    // Variables
+
+    uint8_t i = 0;
+    uint8_t rgb[3];
+
+    // Initialization
+
     initIO();
     initTimers();
     initUSART();
 
-    uint8_t i = 0;
     printString("Hello colorful world!\r\n");
 
+    // HSI-RGB conversion
+
+    hsi2rgb(0.0, 0.0, 1.0, rgb);
+    RED_PWM = rgb[0];
+    GREEN_PWM = rgb[1];
+    BLUE_PWM = rgb[2];
+
+    // Main loop
+
     while(1) {
+        /*
         fadeIn(RED_PWM);
         fadeIn(GREEN_PWM);
         fadeIn(BLUE_PWM);
         fadeOut(RED_PWM);
         fadeOut(GREEN_PWM);
         fadeOut(BLUE_PWM);
+        */
     }
+
     return(0);
 }
