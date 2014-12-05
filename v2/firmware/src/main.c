@@ -24,6 +24,7 @@
 
 #include <avr/io.h>
 #include <util/delay.h>
+#include "usart.h"
 
 // LEDs
 #define LED_DDR DDRD
@@ -104,8 +105,10 @@ int main(void) {
 
     initIO();
     initTimers();
+    initUSART();
 
     uint8_t i = 0;
+    printString("Hello colorful world!\r\n");
 
     while(1) {
         fadeIn(RED_PWM);
