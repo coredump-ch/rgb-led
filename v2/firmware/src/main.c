@@ -28,42 +28,64 @@
 #include "usart.h"
 
 // LEDs
-#define LED_DDR DDRD
-#define QR1 PD3
-#define QG1 PD6
-#define QB1 PD5
+#define LED_DDR  DDRD
+#define QR1      PD3
+#define QG1      PD6
+#define QB1      PD5
 
 // POTs
-#define POT_DDR DDRC
-#define RV1 PC0
-#define RV2 PC1
-#define RV3 PC2
+#define POT_DDR  DDRC
+#define RV1      PC0
+#define RV2      PC1
+#define RV3      PC2
 
 // LED bit values
-#define RED (1 << QR1)
-#define GREEN (1 << QG1)
-#define BLUE (1 << QB1)
+#define RED    (1 << QR1)
+#define GREEN  (1 << QG1)
+#define BLUE   (1 << QB1)
 
 // LED PWM registers
-#define RED_PWM OCR2B
-#define GREEN_PWM OCR0A
-#define BLUE_PWM OCR0B
+#define RED_PWM    OCR2B
+#define GREEN_PWM  OCR0A
+#define BLUE_PWM   OCR0B
 
 // POT bit values
-#define POT1 (1 << RV1)
-#define POT2 (1 << RV2)
-#define POT3 (1 << RV3)
+#define POT1  (1 << RV1)
+#define POT2  (1 << RV2)
+#define POT3  (1 << RV3)
+
+// ADC multiplexing configurations
+#define ADC0  0
+#define ADC1  (1 << MUX0)
+#define ADC2  (1 << MUX1)
 
 // Fading
-#define FADE_INTERVAL 1600
-#define fadeIn(color_pwm) i = 0; do { color_pwm = i; _delay_ms(FADE_INTERVAL / 255); } while (i++ != 255);
-#define fadeOut(color_pwm) i = 255; do { color_pwm = i; _delay_ms(FADE_INTERVAL / 255); } while (i--);
+#define FADE_INTERVAL       1600
+#define fadeIn(color_pwm)   i = 0; do { color_pwm = i; _delay_ms(FADE_INTERVAL / 255); } while (i++ != 255);
+#define fadeOut(color_pwm)  i = 255; do { color_pwm = i; _delay_ms(FADE_INTERVAL / 255); } while (i--);
+
+// Other useful macros (TODO: Refactor out)
+#define bit_is_set(sfr, bit)               (_SFR_BYTE(sfr) & _BV(bit))
+#define bit_is_clear(sfr, bit)             (!(_SFR_BYTE(sfr) & _BV(bit)))
+#define loop_until_bit_is_set(sfr, bit)    do { } while (bit_is_clear(sfr, bit))
+#define loop_until_bit_is_clear(sfr, bit)  do { } while (bit_is_set(sfr, bit))
+
+
+// TODO: Configure clock, set prescaler, don't forget ADC prescaler
 
 
 /** Set up I/O **/
 static inline void initIO(void) {
     LED_DDR |= RED | GREEN | BLUE; // PD3/5/6 are output (LED)
     POT_DDR &= ~(POT1 | POT2 | POT3); // PC0/1/2 are input (POTs)
+}
+
+/** Initialize ADC **/
+static inline void initADC() {
+    ADMUX = _BV(REFS0); // Ref voltage AVcc, right adjust result, read ADC0
+    ADCSRA |= _BV(ADPS0) | _BV(ADPS1) | _BV(ADPS2); // ADC clock prescaler -- 20 MHz / 128 ~= 156 KHz
+    ADCSRA |= _BV(ADEN); // Enable ADC
+    _delay_ms(1); // Settle time
 }
 
 /** Set up timers (PWM) **/
@@ -101,40 +123,57 @@ static inline void initTimers(void) {
     TCCR2A |= _BV(COM2B1);
 }
 
+/** Analog input pin selection **/
+static void selectADC(uint8_t adc_pin) {
+    ADMUX = (ADMUX & 0xF0) | (adc_pin & 0x0F);
+}
+
+/** Read 16 bit value from ADC **/
+static uint16_t readADC(void) {
+    ADCSRA |= _BV(ADSC); // Start ADC conversion
+    loop_until_bit_is_clear(ADCSRA, ADSC); // Wait until done
+    return ADC;
+}
+
+void hsiLoop() {
+    // Variables
+    uint16_t h;
+    uint16_t s;
+    uint16_t i;
+    uint8_t rgb[3];
+
+    selectADC(ADC0);
+    h = readADC();
+    selectADC(ADC1);
+    s = readADC();
+    selectADC(ADC2);
+    i = readADC();
+
+    hsi2rgb((1023 - h ) / 1023.0f * 360.0f,
+            (1023 - s) / 1023.0f,
+            (1023 - i) / 1023.0f,
+            rgb);
+
+    RED_PWM = rgb[0];
+    GREEN_PWM = rgb[1];
+    BLUE_PWM = rgb[2];
+}
+
 /** Entry point **/
 int main(void) {
-
-    // Variables
-
-    uint8_t i = 0;
-    uint8_t rgb[3];
 
     // Initialization
 
     initIO();
     initTimers();
+    initADC();
     initUSART();
 
     printString("Hello colorful world!\r\n");
 
-    // HSI-RGB conversion
-
-    hsi2rgb(0.0, 0.0, 1.0, rgb);
-    RED_PWM = rgb[0];
-    GREEN_PWM = rgb[1];
-    BLUE_PWM = rgb[2];
-
     // Main loop
-
     while(1) {
-        /*
-        fadeIn(RED_PWM);
-        fadeIn(GREEN_PWM);
-        fadeIn(BLUE_PWM);
-        fadeOut(RED_PWM);
-        fadeOut(GREEN_PWM);
-        fadeOut(BLUE_PWM);
-        */
+        hsiLoop();
     }
 
     return(0);
