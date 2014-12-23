@@ -26,8 +26,8 @@
 
 extern void hsi2rgb(float H, float S, float I, uint8_t* rgb) {
     int r, g, b;
-    H = fmod(H,360); // cycle H around to 0-360 degrees
-    H = 3.14159 * H / (float)180; // Convert to radians.
+    H = fmod(H,360.0f); // cycle H around to 0-360 degrees
+    H = 3.14159 * H / 180.0f; // Convert to radians.
     S = S > 0 ? (S < 1 ? S : 1) : 0; // clamp S and I to interval [0,1]
     I = I > 0 ? (I < 1 ? I : 1) : 0;
         
