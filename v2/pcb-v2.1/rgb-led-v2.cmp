@@ -1,0 +1,80 @@
+Cmp-Mod V01 Created by PcbNew date = Mon 01 Dez 2014 22:22:13 CET
+
+BeginCmp
+TimeStamp = /5476D68C;
+Reference = CONN1;
+ValeurCmp = RGB LED;
+IdModule  = PIN_ARRAY_4x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /547A1B2B;
+Reference = CONN2;
+ValeurCmp = VCC 12V;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /547B0358;
+Reference = F1;
+ValeurCmp = FUSE;
+IdModule  = FUSE5-20;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D28C;
+Reference = QB1;
+ValeurCmp = IRF520N FET;
+IdModule  = IRF520N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D286;
+Reference = QG1;
+ValeurCmp = IRF520N FET;
+IdModule  = IRF520N;
+EndCmp
+
+BeginCmp
+TimeStamp = /5476D26F;
+Reference = QR1;
+ValeurCmp = IRF520N FET;
+IdModule  = IRF520N;
+EndCmp
+
+BeginCmp
+TimeStamp = /54775FF7;
+Reference = RV1;
+ValeurCmp = POT;
+IdModule  = POT_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776051;
+Reference = RV2;
+ValeurCmp = POT;
+IdModule  = POT_3_Naked;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776057;
+Reference = RV3;
+ValeurCmp = POT;
+IdModule  = POT_3_Naked;
+EndCmp
+
+BeginCmp
+TimeStamp = /547836EC;
+Reference = SW1;
+ValeurCmp = SPST;
+IdModule  = KCD3;
+EndCmp
+
+BeginCmp
+TimeStamp = /54776301;
+Reference = UC1;
+ValeurCmp = ARDUINO_NANO;
+IdModule  = arduino_nano;
+EndCmp
+
+EndListe
