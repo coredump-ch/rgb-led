@@ -32,5 +32,5 @@ See `LICENSE.md` file.
 
 [v1-photo-back]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v1_back.jpg
 [v2-schema]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/schema.png
-[v2-photo]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v2.jpg
-[v2-photo-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v2_pcb.jpg
+[v2-photo]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/photo_v2.jpg
+[v2-photo-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/photo_v2_pcb.jpg
