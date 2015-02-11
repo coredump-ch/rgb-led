@@ -28,7 +28,7 @@ DrawSegmentWidth="    0.200000"
 BoardOutlineThickness="    0.100000"
 ModuleOutlineThickness="    0.150000"
 [pcbnew/libraries]
-LibDir=../kicad-library
+LibDir=../../kicad-library
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -49,7 +49,7 @@ LibName17=arduino-nano
 LibName18=library
 [eeschema]
 version=1
-LibDir=../kicad-library
+LibDir=../../kicad-library
 NetFmtName=
 RptD_X=0
 RptD_Y=100
