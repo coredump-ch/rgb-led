@@ -19,9 +19,11 @@ The v2 is more advanced and uses an Arduino Nano as controller. The arduino
 controls the RGB LEDs' brightness through PWM. The LEDs are switched with three
 MOSFETs. This enables the control of more LEDs at the same time.
 
+Project description is here: http://www.hackster.io/2460/arduino-controlled-rgb-led-strip
+
+![foto v2][v2-photo]
+![foto v2 pcb][v2-photo-pcb]
 ![schema v2][v2-schema]
-![pcb v2][v2-pcb]
-![3d visualization v2][v2-3d]
 
 ## Licensing
 
@@ -30,5 +32,5 @@ See `LICENSE.md` file.
 
 [v1-photo-back]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v1_back.jpg
 [v2-schema]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/schema.png
-[v2-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/pcb.png
-[v2-3d]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v2/export/v2/3d.png
+[v2-photo]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v2.jpg
+[v2-photo-pcb]: https://raw.githubusercontent.com/coredump-ch/rgb-led/master/v1/photo_v2_pcb.jpg
