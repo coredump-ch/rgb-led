@@ -10,7 +10,7 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-LastNetListRead=../../../../../../mnt/data/Projects/rgb-led/v2/kicad/rgb-led-v2.net
+LastNetListRead=../../../../../../mnt/data/Projects/rgb-led/v2/pcb-v2/rgb-led-v2.net
 UseCmpFile=1
 PadDrill="    0.600000"
 PadDrillOvalY="    0.600000"

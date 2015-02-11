@@ -1,6 +1,6 @@
 (export (version D)
   (design
-    (source /mnt/data/Projects/rgb-led/v2/kicad/rgb-led-v2.sch)
+    (source /mnt/data/Projects/rgb-led/v2/pcb-v2/rgb-led-v2.sch)
     (date "Sun 30 Nov 2014 01:23:26 PM CET")
     (tool "eeschema (2013-may-18)-stable"))
   (components
