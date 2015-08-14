@@ -26,7 +26,7 @@
 #include "pins.h"
 
 // Include effects
-#include "colorwheel.h"
+#include "effects/colorwheel.h"
 #include "effects/rgb_control.h"
 
 

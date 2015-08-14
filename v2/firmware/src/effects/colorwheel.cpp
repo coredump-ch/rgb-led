@@ -1,6 +1,13 @@
 /**
  * Effect: Controllable color wheel.
  *
+ * The goal is to have a "color wheel" cycling through all the colors. The
+ * three pots are used the following way:
+ *
+ *  - Pot 1: Change the saturation
+ *  - Pot 2: Change the intensity
+ *  - Pot 3: Change the speed of change
+ *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -26,50 +33,41 @@
 #include "Arduino.h"
 
 // Get pin definitions
-#include "pins.h"
+#include "../pins.h"
 
-// Global state: Color values (0-255)
-static int val_r = 0;
-static int val_g = 0;
-static int val_b = 0;
+// HSI -> RGB conversion
+#include "../hsi.h"
 
-// Global state: Fading step per color (1 or -1)
-static int step_r = 1;
-static int step_g = 1;
-static int step_b = 1;
+// Hue / Saturation / Intensity
+static float val_h = 0.0; // Range: 0-360
+static float val_s = 1.0; // Range: 0-1
+static float val_i = 1.0; // Range: 0-1
+
+// Delay and step for changing the hue
+static int delay_ms = 20;
+static float hue_step = 1.0;
 
 // Main loop
 void effect_colorwheel(void) {
 
-    // Check limits and fade direction
-    if (val_r == 0) {
-        step_r = 1;
-    } else if (val_r == 255) {
-        step_r = -1;
-    }
-    if (val_g == 0) {
-        step_g = 1;
-    } else if (val_g == 255) {
-        step_g = -1;
-    }
-    if (val_b == 0) {
-        step_b = 1;
-    } else if (val_b == 255) {
-        step_b = -1;
+    // Loop colors
+    if (val_h > 360.0f) {
+        val_h = 0.0f;
     }
 
     // Set colors
-    analogWrite(LED_R, val_r);
-    analogWrite(LED_G, val_g);
-    analogWrite(LED_B, val_b);
+    RGB rgb = hsi2rgb(val_h, val_s, val_i); 
+    analogWrite(LED_R, rgb.r);
+    analogWrite(LED_G, rgb.g);
+    analogWrite(LED_B, rgb.b);
 
-    // Update colors
-    val_b += step_b;
+    // Update hue
+    val_h += hue_step;
 
     // Get delay
-    int milliseconds = analogRead(POT_1) / 16;
+    //int milliseconds = analogRead(POT_1) / 16;
 
     // Sleep
-    delay(milliseconds);
+    delay(delay_ms);
 
 }
