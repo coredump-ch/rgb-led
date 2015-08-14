@@ -36,7 +36,7 @@ void effect_blue_sin(void) {
     // get speed
     int speed = analogRead(POT_1);
 
-    int val_b = sin(time*speed);
+    int val_b = (sin(PI/180.0f*time*speed)+1.0f)/2.0f*255.0f+0.5f;
 
     // Set colors
     analogWrite(LED_R, 0);
@@ -44,7 +44,7 @@ void effect_blue_sin(void) {
     analogWrite(LED_B, val_b);
 
     // Sleep
-    delay(1);
+    delay(10);
     ++time;
 }
 
