@@ -34,7 +34,7 @@ void effect_rgb_control(void) {
     // Get delay
     int val_r = analogRead(POT_1);
     int val_g = analogRead(POT_2);
-    int val_b = analogRead(POT_2);
+    int val_b = analogRead(POT_3);
 
     // Set colors
     analogWrite(LED_R, val_r);
