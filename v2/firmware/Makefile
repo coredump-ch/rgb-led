@@ -4,7 +4,8 @@ ARDMK_DIR     = arduino-makefile
 AVR_TOOLS_DIR = /usr
 
 # Arduino config
-BOARD_TAG          = nano328  # use "make show_boards" to list all
+BOARD_TAG          = nano  # use "make show_boards" to list all
+BOARD_SUB          = atmega328
 ARDUINO_PORT       = /dev/ttyUSB0
 ARDUINO_LIBS       =
 MONITOR_BAUDRATE   = 9600
