@@ -28,6 +28,10 @@
 #include <math.h>
 #include <inttypes.h> 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * Function example takes H, S, I, and a pointer to the 
  * returned RGB colorspace converted vector. It should
@@ -47,6 +51,10 @@
  *
  * Source: http://blog.saikoled.com/post/43693602826/why-every-led-light-should-be-using-hsi
  */
-extern void hsi2rgb(float H, float S, float I, uint8_t* rgb);
+void hsi2rgb(float H, float S, float I, uint8_t* rgb);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
