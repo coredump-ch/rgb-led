@@ -13,6 +13,7 @@ MONITOR_BAUDRATE   = 9600
 # Filesystem config
 LOCAL_C_SRCS   ?= $(wildcard src/*.c)
 LOCAL_CPP_SRCS ?= $(wildcard src/*.cpp)
+LOCAL_CPP_SRCS += $(wildcard src/effects/*.cpp)
 LOCAL_CC_SRCS  ?= $(wildcard src/*.cc)
 LOCAL_PDE_SRCS ?= $(wildcard src/*.pde)
 LOCAL_INO_SRCS ?= $(wildcard src/*.ino)
