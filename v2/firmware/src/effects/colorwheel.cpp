@@ -45,7 +45,7 @@ static float val_i = 1.0; // Range: 0-1
 
 // Delay and step for changing the hue
 static int delay_ms = 20;
-static float hue_step = 1.0;
+static float hue_step = 0.5;
 
 // Main loop
 void effect_colorwheel(void) {
@@ -54,6 +54,12 @@ void effect_colorwheel(void) {
     if (val_h > 360.0f) {
         val_h = 0.0f;
     }
+
+    // Get saturation from potentiometer
+    val_s = 1.0f - (analogRead(POT_1) / 1023.0f);
+
+    // Get intensity from potentiometer
+    val_i = 1.0f - (analogRead(POT_2) / 1023.0f);
 
     // Set colors
     RGB rgb = hsi2rgb(val_h, val_s, val_i); 
@@ -64,8 +70,8 @@ void effect_colorwheel(void) {
     // Update hue
     val_h += hue_step;
 
-    // Get delay
-    //int milliseconds = analogRead(POT_1) / 16;
+    // Get delay from potentiometer
+    delay_ms = analogRead(POT_3) / 32;
 
     // Sleep
     delay(delay_ms);
