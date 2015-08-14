@@ -63,4 +63,4 @@ _autosave-*
 *wings~
 
 # Arduino / AVR
-build-nano328/
+build-*
