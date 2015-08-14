@@ -1,5 +1,5 @@
 /**
- * Main entry point for RGB LED controller.
+ * Effect: Controllable RGB values
  *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
@@ -22,53 +22,30 @@
  * IN THE SOFTWARE.
  */
 
+// Get arduino headers
+#include <Arduino.h>
+
 // Get pin definitions
-#include "pins.h"
+#include "../pins.h"
 
-// Include effects
-#include "effects/colorwheel.h"
-#include "effects/rgb_control.h"
-#include "effects/blue_sin.h"
-
-
-// List of available effects
-enum Effect {
-    Colorwheel,
-    RGBControl,
-    BlueSinus,
-};
-
-// Choose your effect
-static const Effect effect = Colorwheel;
-
-
-// Initialize GPIO pins
-void setup() {
-    // Set LED pins as output
-    pinMode(LED_R, OUTPUT);
-    pinMode(LED_G, OUTPUT);
-    pinMode(LED_B, OUTPUT);
-
-    // Set pot pins as input
-    pinMode(POT_1, INPUT);
-    pinMode(POT_2, INPUT);
-    pinMode(POT_3, INPUT);
-}
-
+unsigned time = 0;
 
 // Main loop
-void loop() {
+void effect_blue_sin(void) {
 
-    switch (effect) {
-        case Colorwheel:
-            effect_colorwheel(); 
-            break;
-        case RGBControl:
-            effect_rgb_control(); 
-            break;
-        case BlueSinus:
-            effect_blue_sin(); 
-            break;
-    }
+    // get speed
+    int speed = analogRead(POT_1);
 
+    int val_b = sin(time*speed);
+
+    // Set colors
+    analogWrite(LED_R, 0);
+    analogWrite(LED_G, 0);
+    analogWrite(LED_B, val_b);
+
+    // Sleep
+    delay(1);
+    ++time;
 }
+
+
