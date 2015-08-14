@@ -1,5 +1,5 @@
 /**
- * Main entry point for RGB LED controller.
+ * Effect: Controllable color wheel.
  *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
@@ -22,43 +22,54 @@
  * IN THE SOFTWARE.
  */
 
+// Get arduino headers
+#include "Arduino.h"
+
 // Get pin definitions
 #include "pins.h"
 
-// Include effects
-#include "colorwheel.h"
+// Global state: Color values (0-255)
+static int val_r = 0;
+static int val_g = 0;
+static int val_b = 0;
 
-
-// List of available effects
-enum Effect {
-    Colorwheel,
-};
-
-// Choose your effect
-static const Effect effect = Colorwheel;
-
-
-// Initialize GPIO pins
-void setup() {
-    // Set LED pins as output
-    pinMode(LED_R, OUTPUT);
-    pinMode(LED_G, OUTPUT);
-    pinMode(LED_B, OUTPUT);
-
-    // Set pot pins as input
-    pinMode(POT_1, INPUT);
-    pinMode(POT_2, INPUT);
-    pinMode(POT_3, INPUT);
-}
-
+// Global state: Fading step per color (1 or -1)
+static int step_r = 1;
+static int step_g = 1;
+static int step_b = 1;
 
 // Main loop
-void loop() {
+void effect_colorwheel(void) {
 
-    switch (effect) {
-        case Colorwheel:
-            effect_colorwheel(); 
-            break;
+    // Check limits and fade direction
+    if (val_r == 0) {
+        step_r = 1;
+    } else if (val_r == 255) {
+        step_r = -1;
     }
+    if (val_g == 0) {
+        step_g = 1;
+    } else if (val_g == 255) {
+        step_g = -1;
+    }
+    if (val_b == 0) {
+        step_b = 1;
+    } else if (val_b == 255) {
+        step_b = -1;
+    }
+
+    // Set colors
+    analogWrite(LED_R, val_r);
+    analogWrite(LED_G, val_g);
+    analogWrite(LED_B, val_b);
+
+    // Update colors
+    val_b += step_b;
+
+    // Get delay
+    int milliseconds = analogRead(POT_1) / 16;
+
+    // Sleep
+    delay(milliseconds);
 
 }

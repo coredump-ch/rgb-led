@@ -1,5 +1,5 @@
 /**
- * Main entry point for RGB LED controller.
+ * Effect: Controllable color wheel.
  *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
@@ -22,43 +22,6 @@
  * IN THE SOFTWARE.
  */
 
-// Get pin definitions
-#include "pins.h"
+#pragma once
 
-// Include effects
-#include "colorwheel.h"
-
-
-// List of available effects
-enum Effect {
-    Colorwheel,
-};
-
-// Choose your effect
-static const Effect effect = Colorwheel;
-
-
-// Initialize GPIO pins
-void setup() {
-    // Set LED pins as output
-    pinMode(LED_R, OUTPUT);
-    pinMode(LED_G, OUTPUT);
-    pinMode(LED_B, OUTPUT);
-
-    // Set pot pins as input
-    pinMode(POT_1, INPUT);
-    pinMode(POT_2, INPUT);
-    pinMode(POT_3, INPUT);
-}
-
-
-// Main loop
-void loop() {
-
-    switch (effect) {
-        case Colorwheel:
-            effect_colorwheel(); 
-            break;
-    }
-
-}
+void effect_colorwheel(void);
