@@ -31,15 +31,15 @@
 // Main loop
 void effect_rgb_control(void) {
     
-    // Get delay
-    int val_r = analogRead(POT_1);
-    int val_g = analogRead(POT_2);
-    int val_b = analogRead(POT_3);
+    // Get poti values and map them to 0..255
+    int val_r = analogRead(POT_1)/4;
+    int val_g = analogRead(POT_2)/4;
+    int val_b = analogRead(POT_3)/4;
 
     // Set colors
-    analogWrite(LED_R, val_r);
-    analogWrite(LED_G, val_g);
-    analogWrite(LED_B, val_b);
+    analogWrite(LED_R, 255-val_r);
+    analogWrite(LED_G, 255-val_g);
+    analogWrite(LED_B, 255-val_b);
 
     // Sleep
     delay(1);
