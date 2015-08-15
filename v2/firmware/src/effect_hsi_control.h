@@ -1,5 +1,6 @@
+#pragma once
 /**
- * Main entry point for RGB LED controller.
+ * Effect: Controllable HSI values
  *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
@@ -22,58 +23,5 @@
  * IN THE SOFTWARE.
  */
 
-// Get pin definitions
-#include "pins.h"
+void effect_hsi_control(void);
 
-// Include effects
-#include "effect_colorwheel.h"
-#include "effect_rgb_control.h"
-#include "effect_hsi_control.h"
-#include "effect_blue_sin.h"
-
-
-// List of available effects
-enum Effect {
-    Colorwheel,
-    RGBControl,
-    HSIControl,
-    BlueSinus,
-};
-
-// Choose your effect
-static const Effect effect = HSIControl;
-
-
-// Initialize GPIO pins
-void setup() {
-    // Set LED pins as output
-    pinMode(LED_R, OUTPUT);
-    pinMode(LED_G, OUTPUT);
-    pinMode(LED_B, OUTPUT);
-
-    // Set pot pins as input
-    pinMode(POT_1, INPUT);
-    pinMode(POT_2, INPUT);
-    pinMode(POT_3, INPUT);
-}
-
-
-// Main loop
-void loop() {
-
-    switch (effect) {
-        case Colorwheel:
-            effect_colorwheel(); 
-            break;
-        case RGBControl:
-            effect_rgb_control(); 
-            break;
-        case HSIControl:
-            effect_hsi_control();
-            break;
-        case BlueSinus:
-            effect_blue_sin(); 
-            break;
-    }
-
-}

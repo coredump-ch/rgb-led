@@ -1,5 +1,5 @@
 /**
- * Main entry point for RGB LED controller.
+ * Effect: Controllable HSI values
  *
  * Copyright (c) 2014--2015 Coredump Rapperswil
  *
@@ -22,58 +22,27 @@
  * IN THE SOFTWARE.
  */
 
+// Get arduino headers
+#include <Arduino.h>
+
 // Get pin definitions
 #include "pins.h"
-
-// Include effects
-#include "effect_colorwheel.h"
-#include "effect_rgb_control.h"
-#include "effect_hsi_control.h"
-#include "effect_blue_sin.h"
-
-
-// List of available effects
-enum Effect {
-    Colorwheel,
-    RGBControl,
-    HSIControl,
-    BlueSinus,
-};
-
-// Choose your effect
-static const Effect effect = HSIControl;
-
-
-// Initialize GPIO pins
-void setup() {
-    // Set LED pins as output
-    pinMode(LED_R, OUTPUT);
-    pinMode(LED_G, OUTPUT);
-    pinMode(LED_B, OUTPUT);
-
-    // Set pot pins as input
-    pinMode(POT_1, INPUT);
-    pinMode(POT_2, INPUT);
-    pinMode(POT_3, INPUT);
-}
-
+#include "hsi.h"
 
 // Main loop
-void loop() {
+void effect_hsi_control(void) {
 
-    switch (effect) {
-        case Colorwheel:
-            effect_colorwheel(); 
-            break;
-        case RGBControl:
-            effect_rgb_control(); 
-            break;
-        case HSIControl:
-            effect_hsi_control();
-            break;
-        case BlueSinus:
-            effect_blue_sin(); 
-            break;
-    }
+  float val_h = (analogRead(POT_1) * 360.0f) / 1023.0f;
+  float val_s = 1.0f-analogRead(POT_2) / 1023.0f;
+  float val_i = 1.0f-analogRead(POT_3) / 1023.0f;
 
+  // Set colors
+  RGB rgb = hsi2rgb(val_h, val_s, val_i);
+  analogWrite(LED_R, rgb.r);
+  analogWrite(LED_G, rgb.g);
+  analogWrite(LED_B, rgb.b);
+
+  // Sleep
+  delay(1);
 }
+
