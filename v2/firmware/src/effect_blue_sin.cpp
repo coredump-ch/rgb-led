@@ -26,7 +26,7 @@
 #include <Arduino.h>
 
 // Get pin definitions
-#include "../pins.h"
+#include "pins.h"
 
 float time = 0.0f;
 float speed = 0.5f;

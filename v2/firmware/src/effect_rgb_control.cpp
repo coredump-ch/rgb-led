@@ -26,7 +26,7 @@
 #include <Arduino.h>
 
 // Get pin definitions
-#include "../pins.h"
+#include "pins.h"
 
 // Main loop
 void effect_rgb_control(void) {

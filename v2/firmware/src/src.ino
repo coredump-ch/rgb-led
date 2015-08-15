@@ -26,9 +26,9 @@
 #include "pins.h"
 
 // Include effects
-#include "effects/colorwheel.h"
-#include "effects/rgb_control.h"
-#include "effects/blue_sin.h"
+#include "effect_colorwheel.h"
+#include "effect_rgb_control.h"
+#include "effect_blue_sin.h"
 
 
 // List of available effects

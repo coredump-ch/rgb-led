@@ -33,10 +33,10 @@
 #include "Arduino.h"
 
 // Get pin definitions
-#include "../pins.h"
+#include "pins.h"
 
 // HSI -> RGB conversion
-#include "../hsi.h"
+#include "hsi.h"
 
 // Hue / Saturation / Intensity
 static float val_h = 0.0; // Range: 0-360
