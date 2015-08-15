@@ -28,15 +28,22 @@
 // Get pin definitions
 #include "../pins.h"
 
-unsigned time = 0;
+float time = 0.0f;
+float speed = 0.5f;
 
 // Main loop
 void effect_blue_sin(void) {
 
-    // get speed
-    int speed = analogRead(POT_1);
+    // get speed, and filter it (IIR) to avoid noise
+    speed = speed*0.5f + analogRead(POT_1)*0.5f/1023.0f;
 
-    int val_b = (sin(PI/180.0f*time*speed)+1.0f)/2.0f*255.0f+0.5f;
+    // calculate sinus value according to time
+    const float sinus_value = sin(PI*time/180.0f);
+    // scale sinus to be between 0 and 1
+    const float sinus_scaled = (sinus_value +1.0f)/2.0f;
+    // by using an exponantial scale we make it more human eye friendly. Then we
+    // scale it to x..255
+    const int val_b = exp(-3*sinus_scaled)*255.0f+0.5f;
 
     // Set colors
     analogWrite(LED_R, 0);
@@ -44,8 +51,11 @@ void effect_blue_sin(void) {
     analogWrite(LED_B, val_b);
 
     // Sleep
-    delay(10);
-    ++time;
-}
+    delay(1);
 
+    time+=speed;
+    if(time>=360.0f) {
+        time = 0.0f;
+    }
+}
 

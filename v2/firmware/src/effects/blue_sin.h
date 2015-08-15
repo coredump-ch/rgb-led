@@ -22,5 +22,7 @@
  * IN THE SOFTWARE.
  */
 
+#pragma once
+
 void effect_blue_sin(void);
 
