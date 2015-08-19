@@ -32,9 +32,11 @@
 // Main loop
 void effect_hsi_control(void) {
 
+  //map POT_1 value to 0..360º
   float val_h = (analogRead(POT_1) * 360.0f) / 1023.0f;
-  float val_s = 1.0f-analogRead(POT_2) / 1023.0f;
-  float val_i = 1.0f-analogRead(POT_3) / 1023.0f;
+  //map POT_2 and POT_3 value to 0..1
+  float val_s = 1.0f - (analogRead(POT_2) / 1023.0f);
+  float val_i = 1.0f - (analogRead(POT_3) / 1023.0f);
 
   // Set colors
   RGB rgb = hsi2rgb(val_h, val_s, val_i);
