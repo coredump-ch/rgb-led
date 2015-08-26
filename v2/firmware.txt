@@ -1,0 +1,1 @@
+The firmware has moved to a separate repo: https://github.com/coredump-ch/rgb-led-firmware

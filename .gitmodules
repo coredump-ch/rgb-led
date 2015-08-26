@@ -1,3 +1,0 @@
-[submodule "v2/firmware/arduino-makefile"]
-	path = v2/firmware/arduino-makefile
-	url = https://github.com/sudar/Arduino-Makefile
