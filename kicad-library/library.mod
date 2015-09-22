@@ -1,4 +1,4 @@
-PCBNEW-LibModule-V1  Wed 11 Feb 2015 08:25:57 PM CET
+PCBNEW-LibModule-V1  Die 22 Sep 2015 23:02:20 CEST
 # encoding utf-8
 Units mm
 $INDEX
@@ -8,6 +8,7 @@ OSHW_COPPER_10MM
 OSHW_MASK_7MM
 POT_3
 POT_3_Naked
+Switch_SS-12F46
 $EndINDEX
 $MODULE IRF520N
 Po 0 0 0 15 547B0EB1 00000000 ~~
@@ -600,4 +601,52 @@ Ne 1 "GND"
 Po 5 0
 $EndPAD
 $EndMODULE POT_3_Naked
+$MODULE Switch_SS-12F46
+Po 0 0 0 15 5601BF56 00000000 ~~
+Li Switch_SS-12F46
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1 1 0 0.15 N V 21 N "Switch_SS-12F46"
+T1 0 0 1 1 0 0.15 N V 21 N "VAL**"
+DS -6.1 -2.9 6.1 -2.9 0.15 21
+DS 6.1 -2.9 6.1 2.9 0.15 21
+DS 6.1 2.9 -6.1 2.9 0.15 21
+DS -6.1 2.9 -6.1 -2.9 0.15 21
+$PAD
+Sh "1" C 2.1 2.1 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po -3 0
+$EndPAD
+$PAD
+Sh "2" C 2.1 2.1 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 0 0
+$EndPAD
+$PAD
+Sh "3" C 2.1 2.1 0 0 0
+Dr 1.2 0 0
+At STD N 00E0FFFF
+Ne 0 ""
+Po 3 0
+$EndPAD
+$PAD
+Sh "" O 1.2 2.4 0 0 0
+Dr 0.8 0 0 O 0.8 2
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po 5.85 0
+$EndPAD
+$PAD
+Sh "" O 1.2 2.4 0 0 0
+Dr 0.8 0 0 O 0.8 2
+At HOLE N 00E0FFFF
+Ne 0 ""
+Po -5.85 0
+$EndPAD
+$EndMODULE Switch_SS-12F46
 $EndLIBRARY
