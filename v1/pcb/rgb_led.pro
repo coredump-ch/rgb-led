@@ -3,7 +3,7 @@ version=1
 last_client=pcbnew
 [eeschema]
 version=1
-LibDir=
+LibDir=../../kicad-library
 NetFmtName=
 RptD_X=0
 RptD_Y=100
@@ -67,8 +67,8 @@ DrawSegmentWidth="    0.200000"
 BoardOutlineThickness="    0.100000"
 ModuleOutlineThickness="    0.150000"
 [pcbnew/libraries]
-LibDir=
-LibName1=library/library
+LibDir=../../kicad-library
+LibName1=library
 LibName2=discret
 LibName3=sockets
 LibName4=connect
