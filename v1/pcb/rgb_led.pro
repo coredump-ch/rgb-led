@@ -1,6 +1,6 @@
-update=Mon 08 Sep 2014 22:35:43 CEST
+update=Die 22 Sep 2015 23:03:35 CEST
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [eeschema]
 version=1
 LibDir=../../kicad-library
@@ -42,11 +42,6 @@ LibName29=contrib
 LibName30=valves
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [pcbnew]
 version=1
 LastNetListRead=
@@ -67,7 +62,6 @@ DrawSegmentWidth="    0.200000"
 BoardOutlineThickness="    0.100000"
 ModuleOutlineThickness="    0.150000"
 [pcbnew/libraries]
-LibDir=../../kicad-library
 LibName1=library
 LibName2=discret
 LibName3=sockets
@@ -85,3 +79,9 @@ LibName14=led
 LibName15=dip_sockets
 LibName16=pga_sockets
 LibName17=valves
+LibDir=../../kicad-library
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
