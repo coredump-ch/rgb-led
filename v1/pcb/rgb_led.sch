@@ -36,7 +36,7 @@ $Descr User 5846 4134
 encoding utf-8
 Sheet 1 1
 Title "RGB LED Board"
-Date "21 oct 2014"
+Date "22 sep 2015"
 Rev "v1"
 Comp "coredump"
 Comment1 ""
@@ -88,18 +88,6 @@ F 3 "" H 1850 2500 60  0000 C CNN
 	1    1850 2500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3200 1400 2950 1400
-Wire Wire Line
-	2950 1400 2950 1550
-Wire Wire Line
-	3200 1700 2950 1700
-Wire Wire Line
-	2950 1700 2950 1850
-Wire Wire Line
-	3200 2000 2950 2000
-Wire Wire Line
-	2950 2000 2950 2150
 $Comp
 L VDD #PWR02
 U 1 1 5367EDA4
@@ -133,37 +121,62 @@ F 3 "~" H 4350 1600 60  0000 C CNN
 	1    4350 1600
 	1    0    0    -1  
 $EndComp
+$Comp
+L SWITCH_INV SW1
+U 1 1 5601B6EA
+P 2500 1100
+F 0 "SW1" H 2300 1250 50  0000 C CNN
+F 1 "SWITCH_INV" H 2350 950 50  0000 C CNN
+F 2 "~" H 2500 1100 60  0000 C CNN
+F 3 "~" H 2500 1100 60  0000 C CNN
+	1    2500 1100
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1850 1550 1850 2500
+	2000 1100 1850 1100
 Wire Wire Line
-	2950 2150 1850 2150
-Connection ~ 1850 2150
+	3800 1000 3000 1000
 Wire Wire Line
-	2950 1850 1850 1850
-Connection ~ 1850 1850
-Wire Wire Line
-	2950 1550 1850 1550
-Wire Wire Line
-	1850 1350 1850 1050
-Wire Wire Line
-	4000 1450 3800 1450
-Wire Wire Line
-	3800 1450 3800 1100
-Wire Wire Line
-	3800 1100 1850 1100
-Connection ~ 1850 1100
-Wire Wire Line
-	3450 1550 4000 1550
-Wire Wire Line
-	4000 1650 3700 1650
-Wire Wire Line
-	3700 1650 3700 1850
-Wire Wire Line
-	3700 1850 3450 1850
-Wire Wire Line
-	4000 1750 3850 1750
+	3850 2150 3450 2150
 Wire Wire Line
 	3850 1750 3850 2150
 Wire Wire Line
-	3850 2150 3450 2150
+	4000 1750 3850 1750
+Wire Wire Line
+	3700 1850 3450 1850
+Wire Wire Line
+	3700 1650 3700 1850
+Wire Wire Line
+	4000 1650 3700 1650
+Wire Wire Line
+	3450 1550 4000 1550
+Connection ~ 1850 1100
+Wire Wire Line
+	3800 1000 3800 1450
+Wire Wire Line
+	3800 1450 4000 1450
+Wire Wire Line
+	1850 1350 1850 1050
+Wire Wire Line
+	2950 1550 1850 1550
+Connection ~ 1850 1850
+Wire Wire Line
+	2950 1850 1850 1850
+Connection ~ 1850 2150
+Wire Wire Line
+	2950 2150 1850 2150
+Wire Wire Line
+	1850 1550 1850 2500
+Wire Wire Line
+	2950 2000 2950 2150
+Wire Wire Line
+	3200 2000 2950 2000
+Wire Wire Line
+	2950 1700 2950 1850
+Wire Wire Line
+	3200 1700 2950 1700
+Wire Wire Line
+	2950 1400 2950 1550
+Wire Wire Line
+	3200 1400 2950 1400
 $EndSCHEMATC
