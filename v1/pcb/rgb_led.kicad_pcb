@@ -3,7 +3,7 @@
   (general
     (links 11)
     (no_connects 0)
-    (area 19.380999 11.887999 82.219001 57.200001)
+    (area 13.208 9.906 86.614001 68.669001)
     (thickness 1.6)
     (drawings 8)
     (tracks 16)
@@ -343,7 +343,7 @@
   (gr_text Green (at 27.94 45.72) (layer B.Mask)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "coredump\nRGB LED V1 2014" (at 61.849 15.621) (layer B.Mask)
+  (gr_text "coredump\nRGB LED V1.1 2015" (at 61.849 15.621) (layer B.Mask)
     (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
   (gr_line (start 19.431 57.15) (end 82.169 57.15) (angle 90) (layer Edge.Cuts) (width 0.1))
