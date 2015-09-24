@@ -416,6 +416,7 @@
     )
   )
 
+  (gr_line (start 183.769 75.438) (end 128.651 75.438) (angle 90) (layer Edge.Cuts) (width 0.1) (tstamp 5603C2D6))
   (gr_text B (at 172.72 109.22) (layer B.Mask)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
@@ -428,9 +429,8 @@
   (gr_text "coredump\nRGB LED V1.1 2015" (at 167.64 78.74) (layer B.Mask)
     (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
-  (gr_line (start 128.651 120.65) (end 191.389 120.65) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 128.651 120.65) (end 183.769 120.65) (angle 90) (layer Edge.Cuts) (width 0.1) (tstamp 5603C2D0))
   (gr_line (start 128.651 75.438) (end 128.651 120.65) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 191.389 75.438) (end 128.651 75.438) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 183.769 120.65) (end 183.769 75.438) (angle 90) (layer Edge.Cuts) (width 0.1))
 
   (segment (start 177.8 116.76) (end 177.72 116.84) (width 1) (layer B.Cu) (net 2) (tstamp 54212D89))
@@ -450,7 +450,7 @@
   (segment (start 135.89 95.25) (end 132.08 99.06) (width 1) (layer B.Cu) (net 6) (tstamp 5601C619))
   (segment (start 135.89 92.71) (end 135.89 95.25) (width 1) (layer B.Cu) (net 6) (tstamp 5601C611))
 
-  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 54212D8F) (hatch edge 0.508)
+  (zone (net 1) (net_name GND) (layer B.Cu) (tstamp 5603C2CF) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
