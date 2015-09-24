@@ -422,9 +422,9 @@
   (gr_text "coredump\nRGB LED V1.1 2015" (at 58.42 15.24) (layer B.Mask)
     (effects (font (size 2 2) (thickness 0.3)) (justify mirror))
   )
-  (gr_line (start 11.811 57.15) (end 74.549 57.15) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 19.431 57.15) (end 82.169 57.15) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 19.431 11.938) (end 19.431 57.15) (angle 90) (layer Edge.Cuts) (width 0.1))
-  (gr_line (start 74.549 11.938) (end 11.811 11.938) (angle 90) (layer Edge.Cuts) (width 0.1))
+  (gr_line (start 82.169 11.938) (end 19.431 11.938) (angle 90) (layer Edge.Cuts) (width 0.1))
   (gr_line (start 74.549 57.15) (end 74.549 11.938) (angle 90) (layer Edge.Cuts) (width 0.1))
 
   (segment (start 68.58 53.26) (end 68.5 53.34) (width 1) (layer B.Cu) (net 2) (tstamp 54212D89))
