@@ -32,8 +32,8 @@ use <textgenerator.scad>;
 //
 //
 
-knob_radius_top = 9;
-knob_radius_bottom = 10;
+knob_radius_top = 6;
+knob_radius_bottom = 7;
 knob_height = 16;
 knob_smoothness = 150;
 
@@ -75,7 +75,7 @@ circle_radius = knob_radius_top;  	// just match the top edge radius
 circle_height = 1; 					// actually.. I don't know what this does.
 pad = 0.2;							// Padding to maintain manifold
 
-top_letter = "R";
+top_letter = "B";
 
 //
 // directional indicators
@@ -85,8 +85,8 @@ top_letter = "R";
 // you can use it instead of the arrow shaped cutout in the top if you like. Or both.
 
 pointy_external_indicator = true;
-pointy_external_indicator_height = 11;
-pointy_external_indicator_pokey_outey_ness = 1.0; // 
+pointy_external_indicator_height = 6;
+pointy_external_indicator_pokey_outey_ness = 0.2; // 
 pokey_outey_value = pointy_external_indicator_pokey_outey_ness - 1 - pad;
 pokey_outey = [pokey_outey_value, pokey_outey_value,0];
 
@@ -117,7 +117,7 @@ translation_of_sphere_indentations = [10,0,15];
 sphere_starting_rotation = 90;
 
 // for cylinder indentations, set quantity, quality, radius, height, and placement
-indentations_cylinder = true;
+indentations_cylinder = false;
 cylinder_number_of_indentations = 25;
 cylinder_quality_of_indentations = 50;
 radius_of_cylinder_indentations_top = 4;
