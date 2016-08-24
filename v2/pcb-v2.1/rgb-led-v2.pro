@@ -1,8 +1,6 @@
-update=Sam 13 Aug 2016 19:28:40 CEST
+update=Mit 24 Aug 2016 08:11:38 CEST
 version=1
 last_client=kicad
-[general]
-version=1
 [cvpcb]
 version=1
 NetIExt=net
@@ -82,3 +80,5 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=arduino-nano
+[general]
+version=1
