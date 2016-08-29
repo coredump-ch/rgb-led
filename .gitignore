@@ -58,7 +58,6 @@ docs/_build/
 pcb/output/
 *-bak
 *.bak
-*-cache.lib
 _autosave-*
 *wings~
 
