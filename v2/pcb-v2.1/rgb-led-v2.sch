@@ -244,12 +244,12 @@ $EndComp
 $Comp
 L PWR_FLAG #FLG09
 U 1 1 547837AB
-P 3250 850
-F 0 "#FLG09" H 3250 945 30  0001 C CNN
-F 1 "PWR_FLAG" H 3250 1030 30  0000 C CNN
-F 2 "" H 3250 850 60  0000 C CNN
-F 3 "" H 3250 850 60  0000 C CNN
-	1    3250 850 
+P 3250 800
+F 0 "#FLG09" H 3250 895 30  0001 C CNN
+F 1 "PWR_FLAG" H 3250 980 30  0000 C CNN
+F 2 "" H 3250 800 60  0000 C CNN
+F 3 "" H 3250 800 60  0000 C CNN
+	1    3250 800 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -285,25 +285,21 @@ F 3 "" H 4850 3600 60  0000 C CNN
 	1    4850 3600
 	1    0    0    -1  
 $EndComp
-Text Label 5350 3500 0    60   ~ 0
-GND
-Text Label 5400 3500 0    60   ~ 0
+Text Label 5100 3500 0    60   ~ 0
 GND
 Text Label 5050 1700 0    60   ~ 0
 GND
 Text Label 5100 2600 0    60   ~ 0
 GND
-Text Label 4850 3600 0    60   ~ 0
-gnd
 $Comp
 L SPST SW1
 U 1 1 547836EC
-P 2500 850
-F 0 "SW1" H 2500 950 70  0000 C CNN
-F 1 "SPST" H 2500 750 70  0000 C CNN
-F 2 "~" H 2500 850 60  0000 C CNN
-F 3 "~" H 2500 850 60  0000 C CNN
-	1    2500 850 
+P 2550 850
+F 0 "SW1" H 2550 950 70  0000 C CNN
+F 1 "SPST" H 2550 750 70  0000 C CNN
+F 2 "~" H 2550 850 60  0000 C CNN
+F 3 "~" H 2550 850 60  0000 C CNN
+	1    2550 850 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -389,9 +385,9 @@ Wire Wire Line
 Wire Wire Line
 	1050 850  1450 850 
 Wire Wire Line
-	3250 850  3250 1500
+	3250 800  3250 1500
 Wire Wire Line
-	3000 850  6900 850 
+	3050 850  6900 850 
 Wire Wire Line
 	1200 850  1200 800 
 Connection ~ 1200 850 
@@ -412,7 +408,7 @@ Wire Wire Line
 Wire Wire Line
 	5800 3500 4850 3500
 Wire Wire Line
-	1950 850  2000 850 
+	1950 850  2050 850 
 $Comp
 L FUSE F1
 U 1 1 547B0358
@@ -425,4 +421,18 @@ F 3 "~" H 1700 850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3250 850 
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 57C56BDD
+P 2000 800
+F 0 "#FLG?" H 2000 895 30  0001 C CNN
+F 1 "PWR_FLAG" H 2000 980 30  0000 C CNN
+F 2 "" H 2000 800 60  0000 C CNN
+F 3 "" H 2000 800 60  0000 C CNN
+	1    2000 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 800  2000 850 
+Connection ~ 2000 850 
 $EndSCHEMATC
