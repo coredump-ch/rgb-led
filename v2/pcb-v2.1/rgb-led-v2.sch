@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:rgb-led-v2-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -10,7 +11,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -31,7 +31,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:arduino-nano
 LIBS:rgb-led-v2-cache
-EELAYER 27 0
+EELAYER 25 0
 EELAYER END
 $Descr User 8268 5846
 encoding utf-8
@@ -90,7 +90,7 @@ F 3 "~" H 7250 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L POT RV1
+L POT-RESCUE-rgb-led-v2 RV1
 U 1 1 54775FF7
 P 1300 2200
 F 0 "RV1" H 1300 2100 50  0000 C CNN
@@ -101,7 +101,7 @@ F 3 "~" H 1300 2200 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L POT RV2
+L POT-RESCUE-rgb-led-v2 RV2
 U 1 1 54776051
 P 1300 2700
 F 0 "RV2" H 1300 2600 50  0000 C CNN
@@ -112,7 +112,7 @@ F 3 "~" H 1300 2700 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L POT RV3
+L POT-RESCUE-rgb-led-v2 RV3
 U 1 1 54776057
 P 1300 3200
 F 0 "RV3" H 1300 3100 50  0000 C CNN
@@ -123,7 +123,7 @@ F 3 "~" H 1300 3200 60  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L ARDUINO_NANO UC1
+L arduino_nano UC1
 U 1 1 54776301
 P 3400 2650
 F 0 "UC1" H 3950 1600 70  0000 C CNN
@@ -134,7 +134,7 @@ F 3 "" H 3400 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L GND-RESCUE-rgb-led-v2 #PWR01
 U 1 1 5477A4E7
 P 4850 1800
 F 0 "#PWR01" H 4850 1800 30  0001 C CNN
@@ -145,7 +145,7 @@ F 3 "" H 4850 1800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L GND-RESCUE-rgb-led-v2 #PWR02
 U 1 1 5477A4F4
 P 4850 2700
 F 0 "#PWR02" H 4850 2700 30  0001 C CNN
@@ -198,7 +198,7 @@ F 3 "" H 1200 800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR05
+L GND-RESCUE-rgb-led-v2 #PWR05
 U 1 1 5477A965
 P 1900 3300
 F 0 "#PWR05" H 1900 3300 30  0001 C CNN
@@ -209,7 +209,7 @@ F 3 "" H 1900 3300 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L GND-RESCUE-rgb-led-v2 #PWR06
 U 1 1 5477A96B
 P 1900 2800
 F 0 "#PWR06" H 1900 2800 30  0001 C CNN
@@ -220,7 +220,7 @@ F 3 "" H 1900 2800 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L GND-RESCUE-rgb-led-v2 #PWR07
 U 1 1 5477A971
 P 1900 2300
 F 0 "#PWR07" H 1900 2300 30  0001 C CNN
@@ -231,7 +231,7 @@ F 3 "" H 1900 2300 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR08
+L GND-RESCUE-rgb-led-v2 #PWR08
 U 1 1 5477AAB7
 P 3400 4200
 F 0 "#PWR08" H 3400 4200 30  0001 C CNN
@@ -244,12 +244,12 @@ $EndComp
 $Comp
 L PWR_FLAG #FLG09
 U 1 1 547837AB
-P 3250 850
-F 0 "#FLG09" H 3250 945 30  0001 C CNN
-F 1 "PWR_FLAG" H 3250 1030 30  0000 C CNN
-F 2 "" H 3250 850 60  0000 C CNN
-F 3 "" H 3250 850 60  0000 C CNN
-	1    3250 850 
+P 3250 800
+F 0 "#FLG09" H 3250 895 30  0001 C CNN
+F 1 "PWR_FLAG" H 3250 980 30  0000 C CNN
+F 2 "" H 3250 800 60  0000 C CNN
+F 3 "" H 3250 800 60  0000 C CNN
+	1    3250 800 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -264,7 +264,7 @@ F 3 "~" H 700 950 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L GND-RESCUE-rgb-led-v2 #PWR010
 U 1 1 547A1B66
 P 1200 1150
 F 0 "#PWR010" H 1200 1150 30  0001 C CNN
@@ -275,7 +275,7 @@ F 3 "" H 1200 1150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L GND-RESCUE-rgb-led-v2 #PWR011
 U 1 1 5477A4FA
 P 4850 3600
 F 0 "#PWR011" H 4850 3600 30  0001 C CNN
@@ -285,25 +285,21 @@ F 3 "" H 4850 3600 60  0000 C CNN
 	1    4850 3600
 	1    0    0    -1  
 $EndComp
-Text Label 5350 3500 0    60   ~ 0
-GND
-Text Label 5400 3500 0    60   ~ 0
+Text Label 5100 3500 0    60   ~ 0
 GND
 Text Label 5050 1700 0    60   ~ 0
 GND
 Text Label 5100 2600 0    60   ~ 0
 GND
-Text Label 4850 3600 0    60   ~ 0
-gnd
 $Comp
 L SPST SW1
 U 1 1 547836EC
-P 2500 850
-F 0 "SW1" H 2500 950 70  0000 C CNN
-F 1 "SPST" H 2500 750 70  0000 C CNN
-F 2 "~" H 2500 850 60  0000 C CNN
-F 3 "~" H 2500 850 60  0000 C CNN
-	1    2500 850 
+P 2550 850
+F 0 "SW1" H 2550 950 70  0000 C CNN
+F 1 "SPST" H 2550 750 70  0000 C CNN
+F 2 "~" H 2550 850 60  0000 C CNN
+F 3 "~" H 2550 850 60  0000 C CNN
+	1    2550 850 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -389,9 +385,9 @@ Wire Wire Line
 Wire Wire Line
 	1050 850  1450 850 
 Wire Wire Line
-	3250 850  3250 1500
+	3250 800  3250 1500
 Wire Wire Line
-	3000 850  6900 850 
+	3050 850  6900 850 
 Wire Wire Line
 	1200 850  1200 800 
 Connection ~ 1200 850 
@@ -412,7 +408,7 @@ Wire Wire Line
 Wire Wire Line
 	5800 3500 4850 3500
 Wire Wire Line
-	1950 850  2000 850 
+	1950 850  2050 850 
 $Comp
 L FUSE F1
 U 1 1 547B0358
@@ -425,4 +421,18 @@ F 3 "~" H 1700 850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3250 850 
+$Comp
+L PWR_FLAG #FLG?
+U 1 1 57C56BDD
+P 2000 800
+F 0 "#FLG?" H 2000 895 30  0001 C CNN
+F 1 "PWR_FLAG" H 2000 980 30  0000 C CNN
+F 2 "" H 2000 800 60  0000 C CNN
+F 3 "" H 2000 800 60  0000 C CNN
+	1    2000 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 800  2000 850 
+Connection ~ 2000 850 
 $EndSCHEMATC
