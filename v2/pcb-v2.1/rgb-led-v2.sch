@@ -36,9 +36,9 @@ EELAYER END
 $Descr User 8268 5846
 encoding utf-8
 Sheet 1 1
-Title "RGB LED v2"
-Date "30 nov 2014"
-Rev "1"
+Title "RGB LED v2.1"
+Date "2016-09-15"
+Rev "2.1"
 Comp "coredump Hackerspace"
 Comment1 ""
 Comment2 ""
