@@ -67,13 +67,13 @@ quality_of_set_screw = 20;
 //
 
 smoothing = true;
-smoothing_radius = 3;				// tweak on this one, how much smoothing to apply
-smooth = 150;						// tweak on this one, Number of facets of rounding cylinder
+smoothing_radius = 3;             // tweak on this one, how much smoothing to apply
+smooth = 150;                     // tweak on this one, Number of facets of rounding cylinder
 
-ct = -0.1; 							// circle translate? not sure.
-circle_radius = knob_radius_top;  	// just match the top edge radius
-circle_height = 1; 					// actually.. I don't know what this does.
-pad = 0.2;							// Padding to maintain manifold
+ct = -0.1;                        // circle translate? not sure.
+circle_radius = knob_radius_top;  // just match the top edge radius
+circle_height = 1;                // actually.. I don't know what this does.
+pad = 0.2;                        // Padding to maintain manifold
 
 top_letter = "B";
 
@@ -142,167 +142,160 @@ make_the_knob();
 module make_the_knob()
 {
 union() {
-	difference() {
-	difference()
-		{
-		difference()
-			{
-		
-			difference() 
-				{
-				difference() 
-					{
-					
-					union()
-						{
-						
-						difference()
-							{
-							// main cylinder
-							cylinder(r1=knob_radius_bottom,r2=knob_radius_top,h=knob_height, $fn=knob_smoothness);
-							
-							smoothing();				
-		
-							}
-				
-						external_direction_indicator();	
+  difference() {
+  difference()
+    {
+    difference()
+      {
+    
+      difference() 
+        {
+        difference() 
+          {
+          
+          union()
+            {
+            
+            difference()
+              {
+              // main cylinder
+              cylinder(r1=knob_radius_bottom,r2=knob_radius_top,h=knob_height, $fn=knob_smoothness);
+              
+              smoothing();        
+    
+              }
+        
+            external_direction_indicator();  
 
-						}
-					shaft_hole();
-					}
-					
-				set_screw_hole();
-				}
-			
-			arrow_indicator();
-			indentations();
-		}
-	}
-	letter();
-	}
+            }
+          shaft_hole();
+          }
+          
+        set_screw_hole();
+        }
+      
+      arrow_indicator();
+      indentations();
+    }
+  }
+  letter();
+  }
    inner_bar();
 }
 }
 
 module smoothing() {
+  // smoothing the top
+  if(smoothing == true) {    
+    translate([0,0,knob_height])
+    rotate([180,0,0])
+    difference() {
+      rotate_extrude(convexity=10,  $fn = smooth)
+      translate([circle_radius-ct-smoothing_radius+pad,ct-pad,0])
+      square(smoothing_radius+pad,smoothing_radius+pad);
 
-// smoothing the top
-				if(smoothing == true)
-					{		
-						translate([0,0,knob_height])
-						rotate([180,0,0])
-						difference() {
-							rotate_extrude(convexity=10,  $fn = smooth)
-							translate([circle_radius-ct-smoothing_radius+pad,ct-pad,0])
-							square(smoothing_radius+pad,smoothing_radius+pad);
-	
-							rotate_extrude(convexity=10,  $fn = smooth)
-							translate([circle_radius-ct-smoothing_radius,ct+smoothing_radius,0])
-							circle(r=smoothing_radius,$fn=smooth);
-							}	
-					}
+      rotate_extrude(convexity=10,  $fn = smooth)
+      translate([circle_radius-ct-smoothing_radius,ct+smoothing_radius,0])
+      circle(r=smoothing_radius,$fn=smooth);
+      }  
+  }
 }
 
 module external_direction_indicator() {
-
-				if(pointy_external_indicator == true)
-						{
-						
-						
-						// outer pointy indicator
-						rotate([0,0,45])
-						translate(pokey_outey)
-						// cube size of 8 minimum to point out
-						cube(size=[knob_radius_bottom,knob_radius_bottom,pointy_external_indicator_height],center=false);
-						}
-
+  if(pointy_external_indicator == true) {
+    // outer pointy indicator
+    rotate([0,0,45])
+      translate(pokey_outey)
+      // cube size of 8 minimum to point out
+      cube(size=[knob_radius_bottom,knob_radius_bottom,pointy_external_indicator_height],center=false);
+  }
 }
 
 module shaft_hole() {
-				// shaft hole
-				difference()
-					{
-					
-					// round shaft hole
-					translate([ 0, 0, -1 ]) 
-					cylinder(r=shaft_radius,h=shaft_height, $fn=shaft_smoothness);
-					
-					if(shaft_is_flatted == true)
-						{
-						// D shaft shape for shaft cutout
-						rotate( [0,0,90]) 
-						translate([-7.5,-5,0]) 
-						cube(size=[flat_size,10,13],center=false);
-						}
-					}
+        // shaft hole
+        difference()
+          {
+          
+          // round shaft hole
+          translate([ 0, 0, -1 ]) 
+          cylinder(r=shaft_radius,h=shaft_height, $fn=shaft_smoothness);
+          
+          if(shaft_is_flatted == true)
+            {
+            // D shaft shape for shaft cutout
+            rotate( [0,0,90]) 
+            translate([-7.5,-5,0]) 
+            cube(size=[flat_size,10,13],center=false);
+            }
+          }
 }
 
 
 module set_screw_hole() {
 
-			if(set_screw == true)
-				{
-				// set screw hole
-				rotate ([90,0,0])
-				translate([ 0, set_screw_height, 1 ])
-				cylinder(r=set_screw_radius,h=set_screw_depth, $fn=quality_of_set_screw);
-				}
+      if(set_screw == true)
+        {
+        // set screw hole
+        rotate ([90,0,0])
+        translate([ 0, set_screw_height, 1 ])
+        cylinder(r=set_screw_radius,h=set_screw_depth, $fn=quality_of_set_screw);
+        }
 }
 
 module arrow_indicator() {
-		if(arrow_indicator == true)
-			{
-			translate(arrow_indicator_translate)
-			// begin arrow top cutout
-			// translate([(knob_radius/2),knob_height,knob_height])
-			rotate([90,0,45])
-			scale([arrow_indicator_scale*.3,arrow_indicator_scale*.3,arrow_indicator_scale*.3])
-			union()
-				{			  
-				rotate([90,45,0])
-				scale([arrow_scale_head,arrow_scale_head,1])
-				cylinder(r=8, h=10, $fn=3, center=true);
-				rotate([90,45,0])
-				translate([-10,0,0])
-				scale([arrow_scale_shaft,arrow_scale_shaft,1])
-				cube(size=[15,10,10],center=true);
-				}
-			}
+    if(arrow_indicator == true)
+      {
+      translate(arrow_indicator_translate)
+      // begin arrow top cutout
+      // translate([(knob_radius/2),knob_height,knob_height])
+      rotate([90,0,45])
+      scale([arrow_indicator_scale*.3,arrow_indicator_scale*.3,arrow_indicator_scale*.3])
+      union()
+        {        
+        rotate([90,45,0])
+        scale([arrow_scale_head,arrow_scale_head,1])
+        cylinder(r=8, h=10, $fn=3, center=true);
+        rotate([90,45,0])
+        translate([-10,0,0])
+        scale([arrow_scale_shaft,arrow_scale_shaft,1])
+        cube(size=[15,10,10],center=true);
+        }
+      }
 }
 
 module indentations() {
 
 if(indentations_sphere == true)
-			{
-			for (z = [0:sphere_number_of_indentations]) 
-				{
-				rotate([0,0,sphere_starting_rotation+((360/sphere_number_of_indentations)*z)])
-				translate(translation_of_sphere_indentations)
-				sphere(size_of_sphere_indentations, $fn=sphere_quality_of_indentations); 
-				}
-			}
+      {
+      for (z = [0:sphere_number_of_indentations]) 
+        {
+        rotate([0,0,sphere_starting_rotation+((360/sphere_number_of_indentations)*z)])
+        translate(translation_of_sphere_indentations)
+        sphere(size_of_sphere_indentations, $fn=sphere_quality_of_indentations); 
+        }
+      }
 if(indentations_cylinder == true)
-			{
-			for (z = [0:cylinder_number_of_indentations]) 
-				{
-				rotate([0,0,cylinder_starting_rotation+((360/cylinder_number_of_indentations)*z)])
-				
-				translate([negative_knob_radius,0,knob_height])
-				translate(translation_of_cylinder_indentations)
-				cylinder(r1=radius_of_cylinder_indentations_bottom, r2=radius_of_cylinder_indentations_top, h=height_of_cylinder_indentations, center=true, $fn=cylinder_quality_of_indentations); 
-				}
-			}
-		}
+      {
+      for (z = [0:cylinder_number_of_indentations]) 
+        {
+        rotate([0,0,cylinder_starting_rotation+((360/cylinder_number_of_indentations)*z)])
+        
+        translate([negative_knob_radius,0,knob_height])
+        translate(translation_of_cylinder_indentations)
+        cylinder(r1=radius_of_cylinder_indentations_bottom, r2=radius_of_cylinder_indentations_top, h=height_of_cylinder_indentations, center=true, $fn=cylinder_quality_of_indentations); 
+        }
+      }
+    }
 
 module inner_bar() {
-	if (inner_bar == true) {
-		translate([-inner_bar_length/2,-inner_bar_thickness/2,shaft_height-inner_bar_height]) {
-			cube([inner_bar_length,inner_bar_thickness,inner_bar_height]);
-		}
-	}
+  if (inner_bar == true) {
+    translate([-inner_bar_length/2,-inner_bar_thickness/2,shaft_height-inner_bar_height]) {
+      cube([inner_bar_length,inner_bar_thickness,inner_bar_height]);
+    }
+  }
 }
 
 module letter() {
-	translate([-2.5,-3.5,knob_height-0.999])
-		drawtext(top_letter);
+  translate([-2.5,-3.5,knob_height-0.999])
+    drawtext(top_letter);
 }
