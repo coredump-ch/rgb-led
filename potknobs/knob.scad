@@ -21,10 +21,10 @@ Version history
 1.0 2012-03-?? initial release.
 1.1 2012-04-12 fixed the arrow indicator code to be more robust and easier to adjust parameters for.
 2.0 2014-09-17 updated the code
+3.0 2016-10-14 replace custom text module with text() function and make knobs thinner
 
 
 */
-use <textgenerator.scad>;
 
 //
 //
@@ -33,7 +33,7 @@ use <textgenerator.scad>;
 //
 
 knob_radius_top = 6;
-knob_radius_bottom = 7;
+knob_radius_bottom = 6;
 knob_height = 16;
 knob_smoothness = 150;
 
@@ -75,7 +75,7 @@ circle_radius = knob_radius_top;  // just match the top edge radius
 circle_height = 1;                // actually.. I don't know what this does.
 pad = 0.2;                        // Padding to maintain manifold
 
-top_letter = "B";
+top_letter = "R";
 
 //
 // directional indicators
@@ -85,8 +85,8 @@ top_letter = "B";
 // you can use it instead of the arrow shaped cutout in the top if you like. Or both.
 
 pointy_external_indicator = true;
-pointy_external_indicator_height = 6;
-pointy_external_indicator_pokey_outey_ness = 0.2; // 
+pointy_external_indicator_height = 4;
+pointy_external_indicator_pokey_outey_ness = 0.05; // 
 pokey_outey_value = pointy_external_indicator_pokey_outey_ness - 1 - pad;
 pokey_outey = [pokey_outey_value, pokey_outey_value,0];
 
@@ -296,6 +296,7 @@ module inner_bar() {
 }
 
 module letter() {
-  translate([-2.5,-3.5,knob_height-0.999])
-    drawtext(top_letter);
+  translate([0,0,knob_height-0.7999])
+    linear_extrude(0.8)
+    text(top_letter, size=6, valign="center", halign="center");
 }
