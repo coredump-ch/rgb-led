@@ -1,4 +1,6 @@
 (fp_lib_table
   (lib (name Pin_Headers)(type KiCad)(uri /home/danilo/Projects/kicad-footprints/Pin_Headers.pretty)(options "")(descr ""))
   (lib (name rgbled-custom)(type KiCad)(uri ../../kicad-library/rgbled-custom.pretty)(options "")(descr ""))
+  (lib (name Buttons_Switches_THT)(type KiCad)(uri /home/danilo/Projects/kicad-footprints/Buttons_Switches_THT.pretty)(options "")(descr ""))
+  (lib (name Resistors_THT)(type KiCad)(uri /home/danilo/Projects/kicad-footprints/Resistors_THT.pretty)(options "")(descr ""))
 )
