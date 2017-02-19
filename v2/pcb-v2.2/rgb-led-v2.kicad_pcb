@@ -333,7 +333,7 @@
       (net 33 "Net-(UC1-Pad29)"))
     (pad 30 thru_hole oval (at -19.05 -7.62 180) (size 1.5748 2.286) (drill 0.8128) (layers *.Cu *.Mask F.SilkS)
       (net 34 "Net-(UC1-Pad30)"))
-    (model arduino-nano.wrl
+    (model /home/danilo/Projects/rgb-led/kicad-library/arduino-nano.wrl
       (at (xyz -0.978 -0.385 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
@@ -466,7 +466,7 @@
       (net 5 "Net-(CONN1-Pad3)"))
     (pad S thru_hole oval (at 7.81 2.78) (size 2 1.2) (drill oval 1.4 0.6) (layers *.Cu *.Mask F.SilkS)
       (net 1 GND))
-    (model irf520n.wrl
+    (model /home/danilo/Projects/rgb-led/kicad-library/irf520n.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
@@ -492,7 +492,7 @@
       (net 6 "Net-(CONN1-Pad4)"))
     (pad S thru_hole oval (at 7.81 2.78) (size 2 1.2) (drill oval 1.4 0.6) (layers *.Cu *.Mask F.SilkS)
       (net 1 GND))
-    (model irf520n.wrl
+    (model /home/danilo/Projects/rgb-led/kicad-library/irf520n.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
@@ -518,7 +518,7 @@
       (net 4 "Net-(CONN1-Pad2)"))
     (pad S thru_hole oval (at 7.81 2.78) (size 2 1.2) (drill oval 1.4 0.6) (layers *.Cu *.Mask F.SilkS)
       (net 1 GND))
-    (model irf520n.wrl
+    (model /home/danilo/Projects/rgb-led/kicad-library/irf520n.wrl
       (at (xyz 0 0 0))
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
@@ -667,7 +667,7 @@
   (gr_text + (at 39.37 25.4) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
   )
-  (gr_text 12V (at 26.035 26.035) (layer F.SilkS)
+  (gr_text 12V (at 21.59 37.465) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_text USB (at 88.9 31.75 270) (layer F.SilkS)
