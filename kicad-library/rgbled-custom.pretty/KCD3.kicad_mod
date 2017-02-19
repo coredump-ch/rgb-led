@@ -1,0 +1,15 @@
+(module KCD3 (layer F.Cu) (tedit 58A9D503)
+  (fp_text reference SW1 (at 7.62 5.08 90) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value SPST (at 10.16 5.08 90) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start 28.2 10.5) (end 0 10.5) (layer F.SilkS) (width 0.15))
+  (fp_line (start 28.2 0) (end 28.2 10.5) (layer F.SilkS) (width 0.15))
+  (fp_line (start 0 0) (end 28.2 0) (layer F.SilkS) (width 0.15))
+  (fp_line (start 0 10.5) (end 0 0) (layer F.SilkS) (width 0.15))
+  (pad 1 thru_hole oval (at 3.4 5.25) (size 2.3 8.8) (drill oval 1.2 7.3) (layers *.Cu *.Mask F.SilkS))
+  (pad 2 thru_hole oval (at 14.1 5.25) (size 2.3 8.8) (drill oval 1.2 7.3) (layers *.Cu *.Mask F.SilkS))
+  (pad 3 thru_hole oval (at 24.8 5.25) (size 2.3 8.8) (drill oval 1.2 7.3) (layers *.Cu *.Mask F.SilkS))
+)
